@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do list & timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body oncontextmenu="return false">
+
+    <div class="container">
+        <div class="todo-app">
+            <h2>To-Do list <img src="images/icon.png"></h2>
+            <div class="row">
+                <input type="text" id="input-box" placeholder="Add your to do">
+                <button id="input-btn" onclick="addTask()">Add</button>
+            </div>
+            <ul id="list-container">
+                <!-- <li class="checked">Task1</li>
+                <li>Task2</li>
+                <li>Task3</li> -->
+            </ul>
+
+            <!-- ! timer -->
+            <div class="time">
+                0:0:0
+            </div>
+            <div class="options">
+                <button class="start">start</button>
+                <button class="stop">stop</button>
+                <button class="reset">reset</button>
+            </div>
+            <h2 contenteditable="true">programming time sodiol 😴</h2>
+        </div>
+
+        <div class="error">
+            <div class="popup">
+                <img src="images/[CITYPNG.COM]PNG Red Round Close X Icon - 700x700.png">
+                <h2>Error</h2>
+                <p>You must write something. Try again! </p>
+                <button type="button">OK</button>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="footer-content">
+          <p>To-Do List & Timer</p>
+          <p>© - 2024 Developed by - Sodiol Sayem</p>
+          <p>Find me on <a href="https://www.facebook.com/profile.php?id=100090420093597" target="_blank">Facebook</a></p>
+        </div>
+      </footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: 100%;
+    min-height: 90vh;
+    background: linear-gradient(135deg, #c300ff, #ff00dd);
+    padding: 10px;
+}
+
+.todo-app {
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.todo-app h2 {
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.todo-app h2 img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+.row #input-box {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+}
+
+.row #input-btn {
+    border: none;
+    padding: 14px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    background: #c300ff;
+    color: #fff;
+    font-size: 15px;
+    transition: .2s ease-in-out;
+}
+
+.row #input-btn:hover {
+    background: #9900ff;
+}
+.container ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 30px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    max-width: 500px;
+    overflow: hidden; /* Adjusted overflow property */
+    flex: 1;
+    word-wrap: break-word; /* Added word-wrap property */
+}
+
+.container ul li::before {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 10px;
+}
+
+.container ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+.container ul li.checked::before {
+    background-image: url(images/checked.png);
+}
+
+.container ul li span {
+    position: absolute;
+    right: 0;
+    top: 1px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    transition: .3s ease;
+    cursor: pointer;
+}
+
+.container ul li span:hover {
+    background: #edeef0;
+    border-radius: 30px;
+}
+
+/*! timer style */
+.time {
+    font-size: 50px;
+    -webkit-text-stroke: 1px #000;
+    color: transparent;
+    margin-top: 80px;
+}
+
+.options button{
+    background: #9900ff;
+    font-size: 22px;
+    color: #fff;
+    -webkit-text-stroke: 1px #fff;
+    padding: 9px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+h2 {
+    margin-top: 20px;
+    color: #fff;
+}
+
+/* ! for the error */
+.popup {
+    width: 400px;
+    background: #fffdfd;
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+}
+
+.open-popup {
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.popup img {
+    width: 100px;
+    margin-top: -50px;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.popup h2 {
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+    color: #222;
+}
+
+.popup button {
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: #9900ff;
+    color: #fff;
+    border: navajowhite;
+    outline: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 18px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+/** footer content */
+  
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .footer-content p {
+    margin: 5px 0;
+  }
+  
+  .footer-content a {
+    color: #c300ff;
+  }
+  
