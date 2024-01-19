@@ -15,7 +15,7 @@ var formattedDate = month + '/' + day + '/' + year;
 function addTask() {
     if (inputBox.value === '') {
         popup.classList.add("open-popup");
-        okBtn.addEventListener("click", () => {
+        inputBox.addEventListener("click", () => {
             popup.classList.remove("open-popup")
         })
     }
