@@ -42,11 +42,11 @@ listContainer.addEventListener("click", (e) => {
 }, false)
 
 function saveData() {
-    localStorage.setItem("allData", listContainer.innerHTML)
+    localStorage.setItem("everyData", listContainer.innerHTML)
 }
 
 function showTask() {
-    listContainer.innerHTML = localStorage.getItem("allData");
+    listContainer.innerHTML = localStorage.getItem("everyData");
 }
 
 showTask();
