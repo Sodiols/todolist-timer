@@ -21,9 +21,9 @@ function addTask() {
     }
     else {
         let li = document.createElement("li");
-        li.innerHTML = inputBox.value +" " + "|" + " " + formattedDate;
+        li.innerHTML = inputBox.value + " " + "|" + " " + formattedDate;
         listContainer.appendChild(li);
-        let span =  document.createElement("span");
+        let span = document.createElement("span");
         span.innerHTML = "\u00d7";
         li.appendChild(span);
     }
@@ -95,17 +95,35 @@ reset_timer.addEventListener("click", () => {
     time.textContent = min + ':' + sec + ':' + ms;
 })
 
+
+
 //? to make the app more usable with shortcuts (ctrl + s to jump searchbar & enter to click the add button) 
 
-document.addEventListener('keydown', function(event) {
+document.addEventListener('keydown', function (event) {
     if ((event.ctrlKey || event.metaKey) && event.key === 'a') {
-      event.preventDefault();
-      document.getElementById('input-box').focus();
+        event.preventDefault();
+        document.getElementById('input-box').focus();
     }
-  });
-  
-  document.addEventListener('keydown', function(event) {
+});
+
+document.addEventListener('keydown', function (event) {
     if (event.key === 'Enter') {
-      document.getElementById('input-btn').click();
+        document.getElementById('input-btn').click();
     }
-  });
+});
+
+
+
+// ! faqs 
+
+const faqsButton = document.querySelector('.faqs');
+const containerFaqs = document.querySelector('.container_faqs');
+const okButton = document.getElementById('okButton');
+
+faqsButton.addEventListener('click', () => {
+    containerFaqs.style.visibility = "visible";
+});
+
+okButton.addEventListener('click', () => {
+    containerFaqs.style.visibility = "hidden";
+});
