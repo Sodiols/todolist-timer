@@ -1,54 +1,72 @@
-<!DOCTYPE html>
-<html lang="en">
+    <!DOCTYPE html>
+    <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To do list & timer</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>To do list & timer</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
 
-<body oncontextmenu="return false">
+    <body>
 
-    <div class="container">
-        <div class="todo-app">
-            <h2>To-Do list <img src="images/icon.png"></h2>
-            <p class="popup">Sorry, You must write something!</p>
-            <div class="row">
-                <input type="text" id="input-box" placeholder="Add your to do">
-                <button id="input-btn" onclick="addTask()">Add</button>
+        <div class="container">
+            <div class="todo-app">
+                <h2>To-Do list <img src="images/icon.png"></h2>
+                <p class="popup">Sorry, You must write something!</p>
+                <div class="row">
+                    <input type="text" id="input-box" placeholder="Add your to do">
+                    <button id="input-btn" onclick="addTask()">Add</button>
+                </div>
+                <ul id="list-container">
+                    <!-- <li class="checked">Task1</li>
+                    <li>Task2</li>
+                    <li>Task3</li> -->
+                </ul>
+
+                <!-- ! timer -->
+                <div class="time">
+                    0:0:0
+                </div>
+                <div class="options">
+                    <button class="start" id="start">start</button>
+                    <button class="stop" id="stop">stop</button>
+                    <button class="reset" id="reset">reset</button>
+                </div>
+                <h2 contenteditable="true">programming time😴</h2>
             </div>
-            <ul id="list-container">
-                <!-- <li class="checked">Task1</li>
-                <li>Task2</li>
-                <li>Task3</li> -->
+
+        </div>
+
+        <footer>
+            <div class="footer-content">
+                <p>To-Do List & Timer</p>
+                <p>© - 2024 Developed by - Sodiol Sayem</p>
+                <p>Find me on <a href="https://www.facebook.com/profile.php?id=100090420093597" target="_blank">Facebook</a>
+                </p>
+                <button class="faqs">Faqs</button>
+            </div>
+        </footer>
+
+        <div class="container_faqs">
+            <p>shortcuts</p>
+            <ul>
+                <li>Use <span class="highglight">ctrl + a</span> to jump on add your to do</li>
+                <li>click <span class="highglight">enter</span> to click add</li>
             </ul>
 
-            <!-- ! timer -->
-            <div class="time">
-                0:0:0
-            </div>
-            <div class="options">
-                <button class="start">start</button>
-                <button class="stop">stop</button>
-                <button class="reset">reset</button>
-            </div>
-            <h2 contenteditable="true">Coding Time 😴</h2>
+            <p>timer</p>
+
+            <ul>
+                <li>use timer to use like your promodoro </li>
+                <li>the text <span class="highglight">"programming time"</span> is editable</li>
+            </ul>
+
+            <button id="okButton">Ok</button>
         </div>
 
-    </div>
 
-    <footer>
-        <div class="footer-content">
-            <p>To-Do List & Timer</p>
-            <p>© - 2024 Developed by - Sodiol Sayem</p>
-            <p>Find me on <a href="https://www.facebook.com/profile.php?id=100090420093597" target="_blank">Facebook</a>
-            </p>
-        </div>
-    </footer>
+        <script src="script.js"></script>
+    </body>
 
-
-    <script src="script.js"></script>
-</body>
-
-</html>
+    </html>
