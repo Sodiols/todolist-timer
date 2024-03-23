@@ -94,3 +94,18 @@ reset_timer.addEventListener("click", () => {
         min = 0;
     time.textContent = min + ':' + sec + ':' + ms;
 })
+
+//? to make the app more usable with shortcuts (ctrl + s to jump searchbar & enter to click the add button) 
+
+document.addEventListener('keydown', function(event) {
+    if ((event.ctrlKey || event.metaKey) && event.key === 'a') {
+      event.preventDefault();
+      document.getElementById('input-box').focus();
+    }
+  });
+  
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+      document.getElementById('input-btn').click();
+    }
+  });
